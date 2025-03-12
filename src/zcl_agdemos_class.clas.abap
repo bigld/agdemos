@@ -20,7 +20,7 @@ CLASS zcl_agdemos_class IMPLEMENTATION.
            WHERE active = @abap_true
            INTO TABLE @DATA(customizings).
 
-    IF sy-subrc = 0.
+    IF sy-dbcnt <= 0.
       out->write( |No Customizing found| ).
     ENDIF.
 
